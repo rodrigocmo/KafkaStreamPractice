@@ -41,10 +41,6 @@ public class OrderService {
             new Order(++orderId, 10, 1, 200, LocalDateTime.now(), OrderType.SELL, 1020)
     ));
 
-    public static void main(String[] args) {
-        SpringApplication.run(OrderService.class, args);
-    }
-
     @Bean
     public Supplier<Message<Order>> orderBuySupplier() {
         return () -> {
